@@ -56,13 +56,12 @@ Suksess for brukeren ser slik ut: raskere og bedre begrunnede beslutninger ved k
 
 ## Success Criteria
 
-`[ASSUMPTION]` Gitt at dette er et kursprosjekt, foreslås suksesskriterier tilpasset en leveranse/demo snarere enn produksjon:
-
-- En bruker kan sette opp et prosjekt (WBS, ressurser, risikoer, milepæler) og få generert en tidsplan og kostprognose uten manuell etterbehandling.
-- Systemet presenterer minst de fire definerte beslutningspunktene (planstrategi, risikorespons, ressursallokering, endringsgodkjenning) med minst ett AI-generert forslag hver, med synlig begrunnelse.
-- En endring i én input (f.eks. en risikohendelse inntreffer) forplanter seg synlig til tidsplan og kostprognose.
-- Alle beslutninger og endringer er sporbare i en audit-logg med tidsstempel og bruker.
-- Løsningen kan demonstreres end-to-end på et realistisk (om enn forenklet) eksempelprosjekt.
+- En pilotbruker kan sette opp et reelt prosjekt (WBS, ressurser, risikoer, milepæler) og få generert en tidsplan og kostprognose uten manuell etterbehandling.
+- Systemet presenterer minst de fire definerte beslutningspunktene (planstrategi, risikorespons, ressursallokering, endringsgodkjenning) med minst ett AI-generert forslag hver, med en begrunnelse prosjektlederen stoler nok på til å handle på.
+- En endring i én input (f.eks. en risikohendelse inntreffer) forplanter seg synlig til tidsplan og kostprognose innen sekunder, ikke minutter.
+- Alle beslutninger og endringer er sporbare i en audit-logg med tidsstempel og bruker — tilstrekkelig til å tåle en intern compliance-/IT-gjennomgang før produksjonsbruk.
+- `[ASSUMPTION]` Minst 2–3 pilotkunder (byggefirmaer) bruker verktøyet aktivt på et løpende prosjekt og rapporterer at det målbart bedret beslutningskvalitet eller -hastighet.
+- `[ASSUMPTION]` Pilotkundene signaliserer betalingsvilje eller ønske om å fortsette bruken etter pilotperioden — det reelle beviset på at problemet er verdt å løse.
 
 ## Scope
 
@@ -79,18 +78,20 @@ Suksess for brukeren ser slik ut: raskere og bedre begrunnede beslutninger ved k
 - Maskinlæring trent på historiske/eksterne prosjektdata.
 - Integrasjon med eksterne PM-verktøy (MS Project, ERP, regnskap).
 - Mobilapp — kun web.
-- Betaling/kjøp — ikke relevant, bekreftet i oppgaven.
+- Betaling/kjøp — ikke relevant for MVP; pris- og forretningsmodell avklares etter pilot.
 
-`[ASSUMPTION]` Skop er trukket stramt for å være realistisk innenfor kursets tidsramme; audit-logg og innlogging er beholdt fordi oppgaveteksten eksplisitt krever det, selv om det øker kompleksiteten.
+`[ASSUMPTION]` Skopet er trukket stramt for å nå en testbar pilot raskt; audit-logg og innlogging er beholdt fra dag én fordi prosjektdata regnes som konfidensielle og fordi compliance/IT hos en reell kunde vil kreve det før noen pilot kan settes i drift — ikke som en formalitet, men som en forutsetning for at noen faktisk får lov til å bruke verktøyet på ekte prosjekter.
 
 ## Vision
 
-`[ASSUMPTION]` Utover kursleveransen: ByggSim kunne vokse til et fullverdig beslutningsstøtteverktøy for byggebransjen, der AI-motoren læres opp på anonymiserte historiske prosjektdata for å gi stadig bedre kalibrerte anbefalinger, med integrasjon mot eksisterende PM- og ERP-systemer, og støtte for porteføljenivå (flere prosjekter samtidig) for større entreprenører.
+`[ASSUMPTION]` ByggSim kunne vokse til et fullverdig beslutningsstøtteverktøy for byggebransjen, der AI-motoren læres opp på anonymiserte historiske prosjektdata for å gi stadig bedre kalibrerte anbefalinger, med integrasjon mot eksisterende PM- og ERP-systemer, og støtte for porteføljenivå (flere prosjekter samtidig) for større entreprenører.
 
 ---
 
 ## Open Questions
 
-- Hvor mye av "AI"-kravet forventes å være ekte modellbasert intelligens (simulering/optimalisering) versus i hvilken grad en LLM skal generere anbefalingstekst? Kurset kan ha spesifikke forventninger her.
-- Er det et krav om flerbrukersamarbeid (flere prosjektledere på samme prosjekt) eller er én bruker per prosjekt tilstrekkelig for MVP?
-- Finnes det en vurderingsrubrikk fra kurset som bør sjekkes mot scope og success criteria over, gitt at brief-en er skrevet uten tilgang til den?
+- Hvor mye av "AI"-kravet bør være ekte modellbasert intelligens (simulering/optimalisering) versus en LLM som formulerer anbefalingstekst? Bør avklares gjennom samtaler med reelle prosjektledere, ikke antas.
+- Er det behov for flerbrukersamarbeid (flere prosjektledere på samme prosjekt), eller er én bruker per prosjekt tilstrekkelig for en pilot?
+- Hvilke konkrete pilotkunder (byggefirmaer) finnes for å validere problemet og teste MVP-en før videre investering?
+- Hvilken forretningsmodell er tiltenkt (lisens, SaaS-abonnement, per-prosjekt), og hvem er den reelle beslutningstakeren/betaleren hos kunden — prosjektlederen selv, eller innkjøp/ledelse?
+- Hvilke faktiske krav til datasikkerhet og lagring gjelder (GDPR, bransjespesifikke krav til byggeprosjektdata), utover den generelle antakelsen om innlogging og audit-logg over?
